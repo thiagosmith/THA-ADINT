@@ -125,6 +125,56 @@ https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive
 
 ### Wazuh
 
+##  Passos para Configurar Regras no Wazuh
+Criar ou editar um arquivo de regras customizadas
+• Caminho padrão no Wazuh Manager:
+```
+/var/ossec/etc/rules/local_rules.xml
+```
+​
+Adicionar regras para eventos do PowerShell
+Exemplo de regra para detectar uso do PowerShell:
+```
+<group name="windows,powershell,">
+  <rule id="100100" level="10">
+    <if_sid>61610</if_sid>
+    <match>powershell.exe</match>
+    <description>Execução do PowerShell detectada</description>
+  </rule>
+</group>
+```
+​61610 é o SID padrão para eventos de criação de processo no Windows.
+
+Adicionar regras para eventos do Sysmon
+Exemplo para detectar criação de processo (Sysmon Event ID 1):
+```
+<group name="windows,sysmon,">
+  <rule id="100200" level="12">
+    <if_sid>61610</if_sid>
+    <match>EventID=1</match>
+    <match>powershell.exe</match>
+    <description>Sysmon - Execução de PowerShell detectada</description>
+  </rule>
+</group>
+```
+Você pode adaptar para outros eventos:
+• ID 3: Conexões de rede
+• ID 11: Criação de arquivos
+• ID 13: Alterações de registro
+
+Reiniciar o Wazuh Manager
+Após salvar as regras:
+```
+sudo systemctl restart wazuh-manager
+```
+​
+Verificar se as regras estão funcionando
+• Use o dashboard do Wazuh ou o arquivo de log:
+```
+/var/ossec/logs/alerts/alerts.log
+```
+
+
 ## 01 Fundamentos de Threat Hunter
 
 ### APT28 Fancy Bear
