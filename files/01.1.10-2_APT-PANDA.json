@@ -1,0 +1,88 @@
+{
+  "version": "2.2",
+  "name": "APT10 – Cadeia de ataque (Phishing → C2)",
+  "description": "TTPs observadas em campanha atribuída ao APT10 com base em logs de phishing, execução de macro, movimentação lateral, exfiltração e beaconing.",
+  "domain": "enterprise-attack",
+  "techniques": [
+    {
+      "techniqueID": "T1566.001",
+      "comment": "Phishing via e-mail com documento Word malicioso contendo macro (Log 1).",
+      "color": "#ff6666"
+    },
+    {
+      "techniqueID": "T1059.001",
+      "comment": "Execução de macro que ativa PowerShell para baixar script remoto (Log 2).",
+      "color": "#ff9966"
+    },
+    {
+      "techniqueID": "T1027",
+      "comment": "Uso de PowerShell com parâmetros para evasão de defesa (-exec bypass, -w hidden).",
+      "color": "#ffcc66"
+    },
+    {
+      "techniqueID": "T1105",
+      "comment": "Transferência de script malicioso via SMB para outro host (Log 3).",
+      "color": "#ffff66"
+    },
+    {
+      "techniqueID": "T1021.002",
+      "comment": "Movimentação lateral via compartilhamento SMB (Log 3).",
+      "color": "#ccff66"
+    },
+    {
+      "techniqueID": "T1041",
+      "comment": "Exfiltração de dados via HTTPS para domínio suspeito (Log 5).",
+      "color": "#99ff66"
+    },
+    {
+      "techniqueID": "T1071.001",
+      "comment": "Beaconing periódico via HTTPS para infraestrutura atribuída ao APT10 (Log 6).",
+      "color": "#66ff66"
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#66ff66"],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Alta confiança",
+      "color": "#ff6666"
+    },
+    {
+      "label": "Execução confirmada",
+      "color": "#ff9966"
+    },
+    {
+      "label": "Evasão observada",
+      "color": "#ffcc66"
+    },
+    {
+      "label": "Movimentação lateral",
+      "color": "#ccff66"
+    },
+    {
+      "label": "Exfiltração",
+      "color": "#99ff66"
+    },
+    {
+      "label": "C2 ativo",
+      "color": "#66ff66"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "Fonte dos logs",
+      "value": "Mail Gateway, EDR, Zeek, Proxy, Firewall"
+    },
+    {
+      "name": "APT atribuído",
+      "value": "APT10 (Stone Panda)"
+    },
+    {
+      "name": "Data do incidente",
+      "value": "2025-10-04"
+    }
+  ]
+}
