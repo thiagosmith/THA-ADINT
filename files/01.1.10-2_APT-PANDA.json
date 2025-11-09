@@ -1,80 +1,131 @@
 {
-  "version": "2.2",
   "name": "APT10 – Cadeia de ataque (Phishing → C2)",
-  "description": "TTPs observadas em campanha atribuída ao APT10 com base em logs de phishing, execução de macro, movimentação lateral, exfiltração e beaconing.",
+  "versions": {
+    "attack": "18",
+    "navigator": "5.2.0",
+    "layer": "4.5"
+  },
   "domain": "enterprise-attack",
+  "description": "TTPs observadas em campanha atribuída ao APT10 com base em logs de phishing, execução de macro, movimentação lateral, exfiltração e beaconing.",
+  "filters": {
+    "platforms": ["Windows"]
+  },
+  "sorting": 2,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": false,
+    "showAggregateScores": true,
+    "countUnscored": true,
+    "aggregateFunction": "average",
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
   "techniques": [
     {
       "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "score": 100,
+      "color": "#ff6666",
       "comment": "Phishing via e-mail com documento Word malicioso contendo macro (Log 1).",
-      "color": "#ff6666"
+      "enabled": true
     },
     {
       "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "score": 90,
+      "color": "#ff9966",
       "comment": "Execução de macro que ativa PowerShell para baixar script remoto (Log 2).",
-      "color": "#ff9966"
+      "enabled": true
     },
     {
       "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "score": 80,
+      "color": "#ffcc66",
       "comment": "Uso de PowerShell com parâmetros para evasão de defesa (-exec bypass, -w hidden).",
-      "color": "#ffcc66"
+      "enabled": true
     },
     {
       "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "score": 70,
+      "color": "#ffff66",
       "comment": "Transferência de script malicioso via SMB para outro host (Log 3).",
-      "color": "#ffff66"
+      "enabled": true
     },
     {
       "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "score": 85,
+      "color": "#ccff66",
       "comment": "Movimentação lateral via compartilhamento SMB (Log 3).",
-      "color": "#ccff66"
+      "enabled": true
     },
     {
       "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "score": 95,
+      "color": "#99ff66",
       "comment": "Exfiltração de dados via HTTPS para domínio suspeito (Log 5).",
-      "color": "#99ff66"
+      "enabled": true
     },
     {
       "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "score": 100,
+      "color": "#66ff66",
       "comment": "Beaconing periódico via HTTPS para infraestrutura atribuída ao APT10 (Log 6).",
-      "color": "#66ff66"
+      "enabled": true
     }
   ],
   "gradient": {
-    "colors": ["#ffffff", "#66ff66"],
+    "colors": ["#ff6666", "#ffe766", "#8ec843"],
     "minValue": 0,
     "maxValue": 100
   },
   "legendItems": [
     {
-      "label": "Alta confiança",
+      "label": "ACF",
       "color": "#ff6666"
     },
     {
-      "label": "Execução confirmada",
+      "label": "EXE",
       "color": "#ff9966"
     },
     {
-      "label": "Evasão observada",
+      "label": "EVD",
       "color": "#ffcc66"
     },
     {
-      "label": "Movimentação lateral",
+      "label": "TRL",
+      "color": "#ffff66"
+    },
+    {
+      "label": "MOV",
       "color": "#ccff66"
     },
     {
-      "label": "Exfiltração",
+      "label": "EXT",
       "color": "#99ff66"
     },
     {
-      "label": "C2 ativo",
+      "label": "C2A",
       "color": "#66ff66"
     }
   ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
   "metadata": [
     {
       "name": "Fonte dos logs",
       "value": "Mail Gateway, EDR, Zeek, Proxy, Firewall"
+    },
+    {
+      "divider": true
     },
     {
       "name": "APT atribuído",
@@ -83,6 +134,10 @@
     {
       "name": "Data do incidente",
       "value": "2025-10-04"
+    },
+    {
+      "name": "Versão ATT&CK",
+      "value": "v18"
     }
   ]
 }
