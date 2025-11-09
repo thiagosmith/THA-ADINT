@@ -125,7 +125,16 @@ https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive
 
 ## Ubuntu - Wazuh
 
-### Wazuh
+### Wazuh Install
+https://wazuh.com/install/
+
+### Wazuh Installation guide
+https://documentation.wazuh.com/current/installation-guide/index.html
+
+### Instalação do Wazuh 4.14 via script
+```
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh --all-in-one --ignore-check --overwrite
+```
 
 ##  Passos para Configurar Regras no Wazuh
 Criar ou editar um arquivo de regras customizadas
