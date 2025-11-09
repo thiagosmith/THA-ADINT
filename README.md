@@ -5,6 +5,9 @@ Repositório de links para o Treinamento Threat Hunting Analist da ADINT School
 
 ## Download do Virtual Box, Extension Pack, Kali Linux, Metasploitable e ISOS(Windows e Ubuntu)
 
+### VirtualBox Package and Virtual Box Extension Pack
+https://www.virtualbox.org/wiki/Downloads
+
 ### Kali Download: 
 https://www.kali.org/get-kali/#kali-virtual-machines
 
@@ -16,3 +19,4 @@ https://drive.google.com/file/d/12xLX9p-XiLgWqn1eLAse1OUe8QsqScqQ/view?usp=drive
 
 ### Ubuntu Server: 
 https://ubuntu.com/download/server
+
