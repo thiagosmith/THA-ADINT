@@ -20,3 +20,7 @@ https://drive.google.com/file/d/12xLX9p-XiLgWqn1eLAse1OUe8QsqScqQ/view?usp=drive
 ### Ubuntu Server: 
 https://ubuntu.com/download/server
 
+## Kali Linux
+´´´
+teste
+´´´
