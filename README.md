@@ -89,7 +89,7 @@ wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true
 Acesse: Sysinternals Sysmon 
 https://learn.microsoft.com/pt-br/sysinternals/downloads/sysmon
 
-• Extraia o conteúdo em:  `C:\Ferramentas\Sysmon`
+• Extraia o conteúdo em:  `C:\Tools\Sysmon`
 
 2. Usar um Arquivo de Configuração Pronto
 Você pode usar o modelo do SwiftOnSecurity:
@@ -101,7 +101,7 @@ curl -o sysmonconfig.xml https://raw.githubusercontent.com/SwiftOnSecurity/sysmo
 No prompt de comando como administrador:
 
 ```
-cd C:\Ferramentas\Sysmon
+cd C:\Tools\Sysmon
 Sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
 
