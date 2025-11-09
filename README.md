@@ -111,12 +111,10 @@ Abra o Visualizador de Eventos e vá até:
 Aplicativos e Serviços > Microsoft > Windows > Sysmon > Operational
 ```
 Você verá eventos como:
-
 • ID 1 – Criação de processo
-
 • ID 3 – Conexões de rede
-
 • ID 11 – Criação de arquivos
+
 
 ### Office 2013
 https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive_link
