@@ -88,6 +88,7 @@ wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true
 1. Baixar o Sysmon:
 Acesse: Sysinternals Sysmon 
 https://learn.microsoft.com/pt-br/sysinternals/downloads/sysmon
+
 • Extraia o conteúdo em:  `C:\Ferramentas\Sysmon`
 
 2. Usar um Arquivo de Configuração Pronto
