@@ -250,7 +250,7 @@ https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/abuse
 
 ```
   connector-abuseipdb-ipblacklist:
-    image: opencti/connector-abuseipdb-ipblacklist:rolling
+    image: opencti/connector-abuseipdb-ipblacklist:6.8.2
     environment:
       - OPENCTI_URL=http://opencti:8080
       - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
