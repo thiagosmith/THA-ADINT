@@ -150,8 +150,107 @@ $ nano .env
 $ sudo docker-compose up
 $ sudo docker-compose down
 ```
-
+Connectors
 https://github.com/OpenCTI-Platform/connectors
+
+Connector MITRE
+https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/mitre/docker-compose.yml
+```
+  connector-mitre:
+    image: opencti/connector-mitre:rolling
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_TOKEN=UUID # gerar para alterar
+    restart: always
+```
+
+Connector Malwarebazaar
+https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/malwarebazaar-recent-additions/docker-compose.yml
+```
+  connector-malwarebazaar-recent-additions:
+    image: opencti/connector-malwarebazaar-recent-additions:rolling
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=UUID # gerar para alterar
+      - "CONNECTOR_NAME=MalwareBazaar Recent Additions"
+      - CONNECTOR_LOG_LEVEL=error
+      - MALWAREBAZAAR_RECENT_ADDITIONS_API_URL=https://mb-api.abuse.ch/api/v1/
+      - MALWAREBAZAAR_RECENT_ADDITIONS_API_KEY=SUA_API_KEY # gerar para alterar
+      - MALWAREBAZAAR_RECENT_ADDITIONS_COOLDOWN_SECONDS=300 # Time to wait in seconds between subsequent requests
+      - MALWAREBAZAAR_RECENT_ADDITIONS_INCLUDE_TAGS=exe,dll,docm,docx,doc,xls,xlsx,xlsm,js # (Optional) Only download files if any tag matches. (Comma separated)
+      - MALWAREBAZAAR_RECENT_ADDITIONS_INCLUDE_REPORTERS= # (Optional) Only download files uploaded by these reporters. (Comma separated)
+      - MALWAREBAZAAR_RECENT_ADDITIONS_LABELS=malware-bazaar # (Optional) Labels to apply to uploaded Artifacts. (Comma separated)
+      - MALWAREBAZAAR_RECENT_ADDITIONS_LABELS_COLOR=#54483b # Color to use for labels
+    restart: always
+```
+
+Alien Vault
+https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/alienvault/docker-compose.yml
+
+Cadastro necessário para obter a OTX Key (API)
+
+https://otx.alienvault.com/
+```
+version: '3'
+services:
+  connector-alienvault:
+    image: opencti/connector-alienvault:rolling
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=UUID # gerar para alterar
+      - CONNECTOR_NAME=AlienVault
+      - CONNECTOR_SCOPE=alienvault
+      - CONNECTOR_LOG_LEVEL=error
+      - CONNECTOR_DURATION_PERIOD=PT30M # In ISO8601 Format starting with "P" for Period ex: "PT30M" = Period time of 30 minutes
+      - ALIENVAULT_BASE_URL=https://otx.alienvault.com
+      - ALIENVAULT_API_KEY=SUA_OTX_KEY # gerar para alterar
+      - ALIENVAULT_TLP=White
+      - ALIENVAULT_CREATE_OBSERVABLES=true
+      - ALIENVAULT_CREATE_INDICATORS=true
+      - ALIENVAULT_PULSE_START_TIMESTAMP=2022-05-01T00:00:00                  # BEWARE! Could be a lot of pulses!
+      - ALIENVAULT_REPORT_TYPE=threat-report
+      - ALIENVAULT_REPORT_STATUS=New
+      - ALIENVAULT_GUESS_MALWARE=false                                        # Use tags to guess malware.
+      - ALIENVAULT_GUESS_CVE=false                                            # Use tags to guess CVE.
+      - ALIENVAULT_EXCLUDED_PULSE_INDICATOR_TYPES=FileHash-MD5,FileHash-SHA1  # Excluded Pulse indicator types.
+      - ALIENVAULT_ENABLE_RELATIONSHIPS=true                                  # Enable/Disable relationship creation between SDOs.
+      - ALIENVAULT_ENABLE_ATTACK_PATTERNS_INDICATES=false                     # Enable/Disable "indicates" relationships between indicators and attack patterns
+      - ALIENVAULT_FILTER_INDICATORS=false                                    # Filter indicators by their created datetime
+      - ALIENVAULT_INTERVAL_SEC=1800
+      - ALIENVAULT_DEFAULT_X_OPENCTI_SCORE=50
+      - ALIENVAULT_X_OPENCTI_SCORE_IP=60
+      - ALIENVAULT_X_OPENCTI_SCORE_DOMAIN=70
+      - ALIENVAULT_X_OPENCTI_SCORE_HOSTNAME=75
+      - ALIENVAULT_X_OPENCTI_SCORE_EMAIL=70
+      - ALIENVAULT_X_OPENCTI_SCORE_FILE=85
+      - ALIENVAULT_X_OPENCTI_SCORE_URL=80
+      - ALIENVAULT_X_OPENCTI_SCORE_MUTEX=60
+      - ALIENVAULT_X_OPENCTI_SCORE_CRYPTOCURRENCY_WALLET=80
+    restart: always
+```
+
+Abuse IP DB
+https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/abuseipdb-ipblacklist/docker-compose.yml
+```
+  connector-abuseipdb-ipblacklist:
+    image: opencti/connector-abuseipdb-ipblacklist:rolling
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=UUID # gerar para alterar
+      - "CONNECTOR_NAME=AbuseIPDB IP Blacklist"
+      - CONNECTOR_SCOPE=abuseipdb
+      - CONNECTOR_LOG_LEVEL=error
+      - ABUSEIPDB_URL=https://api.abuseipdb.com/api/v2/blacklist
+      - ABUSEIPDB_API_KEY=SUA_API_KEY # gerar para alterar
+      - ABUSEIPDB_SCORE=100
+      - ABUSEIPDB_LIMIT=1000000
+      - ABUSEIPDB_INTERVAL=1 #Day
+    restart: always
+```
 
 ## Ubuntu - Wazuh
 
