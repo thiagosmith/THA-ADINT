@@ -126,6 +126,33 @@ https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive
 
 ### OpenCTI
 
+OpenCTI Docker
+
+https://github.com/OpenCTI-Platform/docker
+
+OpenCTI Documentation - Using Docker
+
+https://docs.opencti.io/latest/deployment/installation/#using-docker
+
+```
+$ sudo apt install docker.io
+$ sudo apt install docker-compose
+$ sudo systemctl start docker
+$ sudo mkdir /opt/git
+$ sudo chown -R kali:kali /opt/git
+$ cd /opt/git
+$ git clone https://github.com/OpenCTI-Platform/docker.git
+$ cd docker
+$ ls -la
+$ uuidgen
+$ mv .env.sample .env
+$ nano .env
+$ sudo docker-compose up
+$ sudo docker-compose down
+```
+
+https://github.com/OpenCTI-Platform/connectors
+
 ## Ubuntu - Wazuh
 
 ### Wazuh Install
