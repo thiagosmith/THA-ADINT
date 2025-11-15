@@ -274,9 +274,9 @@ https://wazuh.com/install/
 ### Wazuh Installation guide
 https://documentation.wazuh.com/current/installation-guide/index.html
 
-### Instalação do Wazuh 4.14 via script
+### Instalação do Wazuh 4.7 via script
 ```
-curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh --all-in-one --ignore-check --overwrite
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh --all-in-one --ignore-check --overwrite
 ```
 
 ##  Passos para Configurar Regras no Wazuh
