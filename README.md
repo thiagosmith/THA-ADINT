@@ -268,6 +268,24 @@ https://github.com/OpenCTI-Platform/connectors/blob/master/external-import/abuse
 
 ## Ubuntu - Wazuh
 
+## Configuração da rede via netplan
+```
+root@wazuh:/home/smith# cat /etc/netplan/50-cloud-init.yaml
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      addresses: [192.168.2.165/24]
+      routes:
+        - to: default
+          via: 192.168.2.1
+      nameservers:
+        addresses: [192.168.2.1]
+    enp0s8:
+      dhcp4: false
+```
+
 ### Wazuh Install
 https://wazuh.com/install/
 
