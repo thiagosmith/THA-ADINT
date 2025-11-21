@@ -153,6 +153,33 @@ $ nano .env
 $ sudo docker-compose up
 $ sudo docker-compose down
 ```
+
+Exemplo do meu arquivo .env
+
+```
+smith@opencti:/opt/git/docker$ cat .env
+OPENCTI_ADMIN_EMAIL=admin@opencti.io
+OPENCTI_ADMIN_PASSWORD=changeme
+OPENCTI_ADMIN_TOKEN=b2a9b21d-2f06-490d-813d-a704a0715c73
+OPENCTI_BASE_URL=http://localhost:8080
+OPENCTI_HEALTHCHECK_ACCESS_KEY=changeme
+MINIO_ROOT_USER=opencti
+MINIO_ROOT_PASSWORD=changeme
+RABBITMQ_DEFAULT_USER=opencti
+RABBITMQ_DEFAULT_PASS=changeme
+CONNECTOR_EXPORT_FILE_STIX_ID=3422c5b9-e469-42c3-b7f4-1246d94ca774
+CONNECTOR_EXPORT_FILE_CSV_ID=eac57b4f-504a-492a-818b-381a13055d8b
+CONNECTOR_EXPORT_FILE_TXT_ID=25bf3113-1e01-4bba-95f7-5ac46716c7d6
+CONNECTOR_IMPORT_FILE_STIX_ID=f79fb019-8ac9-430d-a160-43a60563d5bf
+CONNECTOR_IMPORT_DOCUMENT_ID=950f837a-fbf7-46af-bb92-009d27614905
+CONNECTOR_ANALYSIS_ID=7fa9af46-1b13-4ad4-badb-02dfd0d3a67d
+XTM_COMPOSER_ID=c0378cf9-974a-44b8-a639-72f780ebb8ab
+SMTP_HOSTNAME=localhost
+ELASTIC_MEMORY_SIZE=4G
+COMPOSE_PROJECT_NAME=opencti
+smith@opencti:/opt/git/docker$
+```
+
 Connectors
 
 https://github.com/OpenCTI-Platform/connectors
