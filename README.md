@@ -324,6 +324,37 @@ https://documentation.wazuh.com/current/installation-guide/index.html
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh --all-in-one --ignore-check --overwrite
 ```
 
+### Caso apresente problemas na Instalação do Wazuh 4.7 via script
+
+```
+1. Parar os serviços
+$ sudo systemctl stop wazuh-agent
+$ sudo systemctl stop wazuh-manager
+
+2. Desabilitar os serviços (para não iniciarem no boot)
+$ sudo systemctl disable wazuh-agent
+$ sudo systemctl disable wazuh-manager
+
+3. Remover os serviços do systemd
+$ sudo systemctl reset-failed wazuh-agent
+$ sudo systemctl reset-failed wazuh-manager
+
+4. Desinstalar pacotes (dependendo da instalação)
+$ sudo apt-get remove --purge wazuh-agent wazuh-manager -y
+$ sudo apt-get autoremove -y
+
+5. Remover diretórios residuais
+$ sudo rm -rf /var/ossec
+$ sudo rm -rf /etc/ossec.conf
+
+6. Reiniciar o Ubuntu Server
+$ sudo init 6
+
+7. Repetir a instalação
+$ curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh --all-in-one --ignore-check --overwrite
+
+```
+
 ##  Passos para Configurar Regras no Wazuh
 Criar ou editar um arquivo de regras customizadas
 • Caminho padrão no Wazuh Manager:
