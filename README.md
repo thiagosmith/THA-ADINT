@@ -403,6 +403,7 @@ sudo systemctl restart wazuh-manager
 ```
 ​
 Verificar se as regras estão funcionando
+
 • Use o dashboard do Wazuh ou o arquivo de log:
 ```
 /var/ossec/logs/alerts/alerts.log
