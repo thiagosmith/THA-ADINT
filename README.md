@@ -388,9 +388,13 @@ Exemplo para detectar criação de processo (Sysmon Event ID 1):
 </group>
 ```
 Você pode adaptar para outros eventos:
+
 • ID 3: Conexões de rede
+
 • ID 11: Criação de arquivos
+
 • ID 13: Alterações de registro
+
 
 Reiniciar o Wazuh Manager
 Após salvar as regras:
