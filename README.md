@@ -489,6 +489,26 @@ https://myaccount.google.com/apppasswords
 ### Teste Web
 http://testphp.vulnweb.com/login.php
 
+### CTI Report
+
+CTI Report Writing 101
+https://kravensecurity.com/cti-report-writing/
+
+APT29 Report
+https://blackpointcyber.com/wp-content/uploads/2024/06/Threat-Profile-APT29_Blackpoint-Adversary-Pursuit-Group-APG_2024.pdf
+
+Incident Response Methodologies
+https://github.com/certsocietegenerale/IRM/tree/main
+
+ESET Report
+https://web-assets.esetstatic.com/wls/en/papers/threat-reports/eset-apt-activity-report-q4-2024-q1-2025.pdf
+
+Mandiant
+https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2025/
+
+APT29 Mandiant JSON
+https://github.com/thiagosmith/ttps/blob/main/apt.json
+
 ### Desafio 2: Mapeamento de TTPs com MITRE ATT&CK - Logs
 ```
 1. Log de e-mail (Phishing inicial)
