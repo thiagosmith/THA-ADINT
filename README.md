@@ -412,6 +412,9 @@ Verificar se as regras estão funcionando
 
 ## 01 Fundamentos de Threat Hunter
 
+### Turla Group
+https://socradar.io/labs/threat-actor/detail//380/Turla%20Group
+
 ### APT28 Fancy Bear
 https://en.wikipedia.org/wiki/Fancy_Bear
 
