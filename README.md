@@ -415,6 +415,65 @@ Verificar se as regras estão funcionando
 ### Turla Group
 https://socradar.io/labs/threat-actor/detail//380/Turla%20Group
 
+### Conceitos básicos
+
+Termos de Inteligência Cibernética
+
+- Indicadores de Comprometimento (IoCs): Evidências técnicas de que um sistema foi invadido, como IPs maliciosos, hashes de arquivos, domínios suspeitos.
+- TPs (Táticas, Técnicas e Procedimentos): Padrões de comportamento usados por atacantes para executar ataques, como métodos de intrusão, movimentação lateral e exfiltração de dados.
+- Actor Profiles: Perfis de grupos ou indivíduos maliciosos, incluindo motivações (financeiras, políticas), capacidades técnicas e histórico de ataques.
+- Feeds de Inteligência Cibernética: Fontes automatizadas que fornecem dados atualizados sobre ameaças, como IoCs, TTPs e perfis de atores.
+
+
+Infraestrutura e Componentes Técnicos
+
+- Domínio: Nome legível associado a um endereço IP, usado para identificar sites na internet.
+- URL: Endereço completo que inclui o domínio e o caminho para um recurso específico (ex: https://site.com/pagina).
+- Artefatos: Elementos técnicos deixados por um ataque, como arquivos maliciosos, scripts ou logs.
+- Payloads: Carga útil de um ataque, geralmente o código malicioso que executa a ação (ex: ransomware).
+- Beacons: Sinais enviados por malware para se comunicar com servidores de comando e controle (C2).
+- Infraestrutura adversária: Conjunto de recursos usados por atacantes, como servidores, domínios, certificados e ferramentas.
+
+
+Ferramentas e Técnicas
+
+- LofL (Living off The Land): Técnica em que atacantes usam ferramentas legítimas do sistema (como PowerShell) para evitar detecção.
+- PCAP (Packet Capture): Arquivo que armazena pacotes de rede capturados, útil para análise forense.
+- Surface Web: Parte da internet acessível por mecanismos de busca comuns.
+- Deep Web: Conteúdo não indexado por buscadores, como bancos de dados privados ou páginas protegidas por login.
+- Dark Web: Segmento da Deep Web acessível apenas por redes como Tor, onde ocorrem atividades ilícitas.
+- Tor: Rede que permite navegação anônima, usada para acessar a Dark Web.
+- Crawlers: Bots que exploram sites e redes para coletar dados, usados tanto por buscadores quanto por analistas de segurança.
+
+
+Regras e Plataformas de Detecção
+
+- SIGMA: Linguagem para criar regras genéricas de detecção de ameaças em logs de eventos.
+- YARA: Ferramenta para identificar e classificar arquivos maliciosos com base em padrões.
+- SIEM (Security Information and Event Management): Plataforma que coleta, analisa e correlaciona logs de segurança em tempo real.
+- EDR (Endpoint Detection and Response): Solução que monitora e responde a ameaças em dispositivos finais (computadores, servidores).
+- XDR (Extended Detection and Response): Evolução do EDR que integra dados de múltiplas fontes (rede, e-mail, endpoint) para resposta coordenada.
+
+
+Itens Complementares para Threat Hunting
+
+- MITRE ATT&CK Framework: Base de conhecimento que categoriza TTPs usados por adversários. Essencial para mapear comportamentos e criar hipóteses de caça.
+- C2 (Command and Control): Mecanismos usados por atacantes para controlar sistemas comprometidos. Identificar padrões de C2 é chave para detectar persistência.
+- Análise de Logs: Logs de sistema, rede, autenticação e aplicação são fontes primárias para caçadores de ameaças.
+- Hunting Hypotheses: Estratégias baseadas em suposições fundamentadas para guiar investigações proativas.
+- Anomalias de Comportamento: Detecção de desvios em padrões normais de uso, como horários incomuns de login ou transferências de dados atípicas.
+- Threat Intelligence Enrichment: Uso de inteligência externa para contextualizar eventos suspeitos (ex: reputação de IPs, domínios, hashes).
+- Memory Forensics: Análise da memória volátil para detectar malware em execução ou artefatos temporários.
+- Sandboxing: Execução de arquivos suspeitos em ambiente isolado para observar comportamento malicioso.
+- Honeypots: Sistemas armadilhas que simulam vulnerabilidades para atrair e estudar atacantes.
+- Técnicas de Evasão: Métodos usados por adversários para evitar detecção, como ofuscação, criptografia ou uso de ferramentas legítimas (LofL).
+- Time-Based Analysis: Correlação de eventos com base em cronologia para identificar cadeias de ataque.
+- Threat Score / Risk Rating: Classificação de eventos ou artefatos com base em risco potencial.
+- Telemetry: Dados coletados de endpoints, rede e aplicações para análise contínua.
+- False Positives / Negatives: Avaliação crítica da eficácia das regras de detecção e dos alertas gerados.
+- ... to be continue
+
+
 ### APT28 Fancy Bear
 https://en.wikipedia.org/wiki/Fancy_Bear
 
