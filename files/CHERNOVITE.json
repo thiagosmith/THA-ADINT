@@ -1,0 +1,73 @@
+{
+  "version": "4.6",
+  "name": "CHERNOVITE - PIPEDREAM TTPs",
+  "description": "Layer com TTPs atribuídas ao grupo CHERNOVITE e ao malware PIPEDREAM, voltado para ambientes industriais",
+  "domain": "ics-attack",
+  "techniques": [
+    {
+      "techniqueID": "T0866",
+      "score": 3,
+      "comment": "Manipulação de controladores industriais (PLCs)",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T0883",
+      "score": 3,
+      "comment": "Execução de comandos maliciosos via protocolos industriais",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T0858",
+      "score": 2,
+      "comment": "Acesso remoto a dispositivos industriais",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T0886",
+      "score": 2,
+      "comment": "Exfiltração de dados via protocolos industriais",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T0890",
+      "score": 2,
+      "comment": "Uso de ferramentas de engenharia fora do padrão",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T0889",
+      "score": 2,
+      "comment": "Persistência via scripts e automação",
+      "color": "#ff6600"
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#ff0000"],
+    "minValue": 0,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Alta prioridade",
+      "color": "#ff0000"
+    },
+    {
+      "label": "Prioridade média",
+      "color": "#ff6600"
+    }
+  ],
+  "metadata": [],
+  "filters": {
+    "stages": [],
+    "platforms": []
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showID": false,
+    "showName": true,
+    "showAggregateScores": false,
+    "aggregateFunction": "average",
+    "showUnscored": true
+  }
+}

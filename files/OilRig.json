@@ -1,0 +1,86 @@
+{
+  "version": "4.6",
+  "name": "APT34 - OilRig TTPs",
+  "description": "Layer com TTPs atribuídas ao grupo APT34 (OilRig), focado em ataques ao setor energético",
+  "domain": "enterprise-attack",
+  "techniques": [
+    {
+      "techniqueID": "T1566",
+      "score": 3,
+      "comment": "Phishing como vetor de acesso inicial",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1059",
+      "score": 3,
+      "comment": "Execução de comandos via PowerShell e scripts",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1071",
+      "score": 2,
+      "comment": "Comunicação C2 via protocolos de aplicação",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1547",
+      "score": 3,
+      "comment": "Persistência por inicialização e logon",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1003",
+      "score": 3,
+      "comment": "Coleta de credenciais via dumping de LSASS",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1021",
+      "score": 2,
+      "comment": "Movimentação lateral por serviços remotos",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1041",
+      "score": 2,
+      "comment": "Exfiltração de dados por canal C2",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1568",
+      "score": 2,
+      "comment": "DNS tunneling para evasão e exfiltração",
+      "color": "#ff6600"
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#ff0000"],
+    "minValue": 0,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Alta prioridade",
+      "color": "#ff0000"
+    },
+    {
+      "label": "Prioridade média",
+      "color": "#ff6600"
+    }
+  ],
+  "metadata": [],
+  "filters": {
+    "stages": [],
+    "platforms": []
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showID": false,
+    "showName": true,
+    "showAggregateScores": false,
+    "aggregateFunction": "average",
+    "showUnscored": true
+  }
+}
+

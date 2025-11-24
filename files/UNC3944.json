@@ -1,0 +1,79 @@
+{
+  "version": "4.6",
+  "name": "UNC3944 - Scattered Spider TTPs",
+  "description": "Layer com TTPs atribuídas ao grupo UNC3944 (Scattered Spider), focado em ataques ao setor financeiro",
+  "domain": "enterprise-attack",
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "score": 3,
+      "comment": "Uso de credenciais válidas obtidas via engenharia social",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1556",
+      "score": 3,
+      "comment": "Manipulação de autenticação multifator (MFA)",
+      "color": "#ff0000"
+    },
+    {
+      "techniqueID": "T1606",
+      "score": 2,
+      "comment": "Criação de contas OAuth para persistência",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1550",
+      "score": 2,
+      "comment": "Sequestro de sessões e tokens SAML",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1021",
+      "score": 2,
+      "comment": "Movimentação lateral via RDP e serviços remotos",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1041",
+      "score": 2,
+      "comment": "Exfiltração de dados via canais criptografados",
+      "color": "#ff6600"
+    },
+    {
+      "techniqueID": "T1218",
+      "score": 2,
+      "comment": "Uso de ferramentas legítimas para evasão (LOLBins)",
+      "color": "#ff6600"
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#ff0000"],
+    "minValue": 0,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Alta prioridade",
+      "color": "#ff0000"
+    },
+    {
+      "label": "Prioridade média",
+      "color": "#ff6600"
+    }
+  ],
+  "metadata": [],
+  "filters": {
+    "stages": [],
+    "platforms": []
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showID": false,
+    "showName": true,
+    "showAggregateScores": false,
+    "aggregateFunction": "average",
+    "showUnscored": true
+  }
+}
