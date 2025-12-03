@@ -12,10 +12,10 @@ https://www.virtualbox.org/wiki/Downloads
 https://www.kali.org/get-kali/#kali-virtual-machines
 
 ### Metasploitable:
-https://drive.google.com/file/d/1QQwcYOcoKg4zAUEB0xS5urE53H4xWgv_/view?usp=drive_link
+https://drive.google.com/file/d/1KG-2Qul6-ydfmLlr4ms-VqzUQnJYZWbv/view?usp=sharing
 
 ### Windows 10:
-https://drive.google.com/file/d/12xLX9p-XiLgWqn1eLAse1OUe8QsqScqQ/view?usp=drive_link
+https://drive.google.com/file/d/1xJPRTb_9YLlXH51nM1y7DPbda9Xg0fQP/view?usp=sharing
 
 ### Ubuntu Server: 
 https://ubuntu.com/download/server
@@ -120,7 +120,7 @@ Você verá eventos como:
 
 
 ### Office 2013
-https://drive.google.com/file/d/11wmov4jpwOzQ2A0Rq0osQ4-YjdfsLTEV/view?usp=drive_link
+https://drive.google.com/file/d/1fZX_9lmvZ-lJsUxYhuszxLNgR-ewnENQ/view?usp=sharing
 
 ## Ubuntu - OpenCTI
 
@@ -592,10 +592,58 @@ https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 ### The Pyramid of Pain
 https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
 
+## Lab Ambiente Active Directory
 
+### Infomações do dominio
 
+Domain Controller
+Hostname: DC01
+Endereço de IP: 192.168.2.222
+Endereço de DNS: 192.168.2.222
+Nome do Domínio: adint.school
+Nome do NetBIOS: adint
 
+File Server
+Hostname: FILE01
+Endereço de IP: 192.168.2.223
+Endereço de DNS: 192.168.2.222
 
+MS SQL Server
+Hostname: SQL01
+Endereço de IP: 192.168.2.224
+Endereço de DNS: 192.168.2.222
 
+Unidades Organizacionais:
+```
+ICS
+CTI
+```
+
+Usuários:
+```
+Administrator:
+support:Suporte@123
+robson:
+jordan:
+marcelo:
+danielle:
+milton:
+andre:
+smith:
+gabriel:
+rayssa:
+sqluser
+```
+
+Grupos:
+```
+ICSgroup
+CTIgroup
+```
+
+Políticas de segurança
+```
+Bloqueio do Windows defender
+```
 
 
