@@ -597,35 +597,27 @@ https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
 ### Infomações do dominio
 
 Domain Controller
-
+```
 Hostname: DC01
-
 Endereço de IP: 192.168.2.222
-
 Endereço de DNS: 192.168.2.222
-
 Nome do Domínio: adint.school
-
 Nome do NetBIOS: adint
-
+```
 
 File Server
-
+```
 Hostname: FILE01
-
 Endereço de IP: 192.168.2.223
-
 Endereço de DNS: 192.168.2.222
-
+```
 
 MS SQL Server
-
+```
 Hostname: SQL01
-
 Endereço de IP: 192.168.2.224
-
 Endereço de DNS: 192.168.2.222
-
+```
 
 Unidades Organizacionais:
 ```
@@ -635,7 +627,7 @@ CTI
 
 Usuários:
 ```
-Administrator:
+Administrator:Password10!
 support:Suporte@123
 robson:
 jordan:
@@ -646,7 +638,7 @@ andre:
 smith:
 gabriel:
 rayssa:
-sqluser
+sqluser:3edc#EDC
 ```
 
 Grupos:
