@@ -628,17 +628,17 @@ CTI
 Usuários:
 ```
 Administrator:Password10!
-support:Suporte@123
-robson:
-jordan:
-marcelo:
-danielle:
-milton:
-andre:
-smith:
-gabriel:
-rayssa:
 sqluser:3edc#EDC
+support:Suporte@123
+marcelo:SenhaForte@123
+gabriel:SenhaForte@123
+andre:Trocar@123
+smith:Trocar@123
+robson:Adint@1337
+jordan:Password1!
+danielle:Password1!
+milton:Password1!
+rayssa:Password1!
 ```
 
 Grupos:
