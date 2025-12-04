@@ -598,15 +598,18 @@ https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
 
 Domain Controller
 ```
+User Local: Administrator:Adint@dc01
 Hostname: DC01
 Endereço de IP: 192.168.2.222
 Endereço de DNS: 192.168.2.222
 Nome do Domínio: adint.school
 Nome do NetBIOS: adint
+Adinistrator:Adint@dominio1
 ```
 
 File Server
 ```
+User Local: Administrator:Adint@file01
 Hostname: FILE01
 Endereço de IP: 192.168.2.223
 Endereço de DNS: 192.168.2.222
@@ -614,6 +617,7 @@ Endereço de DNS: 192.168.2.222
 
 MS SQL Server
 ```
+User Local: Administrator:Adint@sql01
 Hostname: SQL01
 Endereço de IP: 192.168.2.224
 Endereço de DNS: 192.168.2.222
@@ -627,7 +631,7 @@ CTI
 
 Usuários:
 ```
-Administrator:Password10!
+Administrator:Adint@dominio1
 sqluser:3edc#EDC
 support:Suporte@123
 marcelo:SenhaForte@123
