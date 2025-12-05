@@ -671,4 +671,39 @@ Políticas de segurança
 Bloqueio do Windows defender
 ```
 
+### Instalação do MS SQL Server 2019
 
+Acesso ao banco de dados via Kali Linux
+```
+$ impacket-mssqlclient sqluser:'3edc#EDC'@192.168.2.224 -windows-auth
+```
+
+Criação da base de dados
+```
+SQL (ADINT\sqluser  dbo@master)> CREATE DATABASE credentials;
+```
+
+Listagem das base de dados
+```
+SQL (ADINT\sqluser  dbo@master)> EXEC sp_databases;
+```
+
+Selecionar a base de dados credentials
+```
+SQL (ADINT\sqluser  dbo@master)> use credentials;
+```
+
+Criação da tabela usuários
+```
+SQL (ADINT\sqluser  dbo@credentials)> CREATE TABLE Usuarios (ID INT PRIMARY KEY, Nome NVARCHAR(50) NOT NULL, Email NVARCHAR(100) NOT NULL UNIQUE, Senha NVARCHAR(100) NOT NULL); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (1,'Ana','ana@cybersec.local','3vF$6IPygnho%'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (2,'Carlos','carlos@cybersec.local','Q0h&Jc1+CFhYD'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (3,'Mariana','mariana@cybersec.local','vrhtJh4BSsGn-kD9'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (4,'Pedro','pedro@cybersec.local','S9eZVAd2$gA&3u'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (5,'Camila','camila@cybersec.local','rXgbV98#E@jX'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (6,'Rafael','rafael@cybersec.local','Apua%HjVhS@vu3Wq'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (7,'Beatriz','beatriz@cybersec.local','-RdI+V6b7#5XQ'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (8,'Lucas','lucas@cybersec.local','LKk5L$TuVHecxTk'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (9,'Juliana','juliana@cybersec.local','#%BhyEMK@L30mW'); INSERT INTO Usuarios (ID, Nome, Email, Senha) VALUES (10,'Felipe','felipe@cybersec.local','H#NM8$P+Ffo*Xr');
+```
+
+Listagem das Tabelas
+```
+SQL (ADINT\sqluser  dbo@credentials)> SELECT name FROM sys.tables;
+```
+
+Consulta de dados
+```
+SQL (ADINT\sqluser  dbo@credentials)> SELECT * FROM Usuarios;
+```
