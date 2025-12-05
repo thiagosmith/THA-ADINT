@@ -660,10 +660,10 @@ DEVgroup
 - robson
 
 ICSgroup
-marcelo
-gabriel
-andre
-smith
+- marcelo
+- gabriel
+- andre
+- smith
 ```
 
 Políticas de segurança
