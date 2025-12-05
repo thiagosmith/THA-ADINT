@@ -625,8 +625,9 @@ Endereço de DNS: 192.168.2.222
 
 Unidades Organizacionais:
 ```
-ICS
+DEV
 CTI
+ICS
 ```
 
 Usuários:
@@ -647,8 +648,22 @@ rayssa:Password1!
 
 Grupos:
 ```
-ICSgroup
 CTIgroup
+- jordan
+- danielle
+- milton
+- rayssa
+
+DEVgroup
+- sqluser
+- support
+- robson
+
+ICSgroup
+marcelo
+gabriel
+andre
+smith
 ```
 
 Políticas de segurança
