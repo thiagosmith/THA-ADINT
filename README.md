@@ -707,3 +707,9 @@ Consulta de dados
 ```
 SQL (ADINT\sqluser  dbo@credentials)> SELECT * FROM Usuarios;
 ```
+
+### Implantação do Serviço SPN vulnerável
+```
+setspn -a DC01/sqluser.adint.school adint\sqluser
+setspn -T adint.school -Q */*
+```
